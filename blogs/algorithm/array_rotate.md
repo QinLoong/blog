@@ -21,3 +21,20 @@ function rotate1(arr: number[], k: number): number[] {
 
   return arr;
 }
+
+/**
+ * 第二种
+ * @param arr
+ * @param k
+ * @returns
+ */
+function rotate2(arr: number[], k: number): number[] {
+  if (!k || arr.length === 0) return arr;
+  const step = Math.abs(k % arr.length);
+
+  const p1 = arr.slice(-step);
+  const p2 = arr.slice(0, arr.length - step);
+  const p3 = p1.concat(p2);
+
+  return p3;
+}
