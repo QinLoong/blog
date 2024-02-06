@@ -38,3 +38,10 @@ function rotate2(arr: number[], k: number): number[] {
 
   return p3;
 }
+
+/* 
+性能比较
+rotate1: 183.006ms
+rotate2: 0.875ms
+*/
+```
