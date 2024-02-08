@@ -6,3 +6,21 @@ tags:
 categories:
  - 算法
 ---
+
+```js
+const data = [
+  {
+    id:1,
+    label:'l-1',
+    parentId:0
+  },
+  {
+    id:2,
+    label:'l-2',
+    parentId:0
+  },
+  {
+    id:3,
+    label:'l-1-1',
+    parentId:1
+  },
