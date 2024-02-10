@@ -40,3 +40,5 @@ const data = [
     parentId:5
   }
 ]
+
+function arrToTree(data){
