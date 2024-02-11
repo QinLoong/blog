@@ -42,3 +42,5 @@ const data = [
 ]
 
 function arrToTree(data){
+    let result = []
+    let map = {}
