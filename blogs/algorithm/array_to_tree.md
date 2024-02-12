@@ -44,3 +44,7 @@ const data = [
 function arrToTree(data){
     let result = []
     let map = {}
+    // 遍历，存储每个节点的引用
+    data.forEach(item => {
+        map[item.id] = item
+    })
