@@ -48,3 +48,13 @@ function arrToTree(data){
     data.forEach(item => {
         map[item.id] = item
     })
+
+    data.forEach(item => {
+    let parent = map[item.parentId]
+    // 还需判断是否需要添加children属性
+    if(parent){
+      (parent.children || (parent.children = [])).push(item)
+    }else{
+      result.push(item)
+    }
+  })
