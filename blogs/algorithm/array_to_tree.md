@@ -58,3 +58,7 @@ function arrToTree(data){
       result.push(item)
     }
   })
+
+let res = arrToTree(data)
+console.log(res)
+```
