@@ -14,3 +14,10 @@ categories:
  * @param target
  * @returns
  */
+
+export function search1(arr: number[], target: number): number {
+  if (arr.length === 0) return -1;
+  let startIndex = 0;
+  let endIndex = arr.length - 1;
+  let midIndex: number;
+  let midVal: number;
