@@ -39,3 +39,7 @@ export function search1(arr: number[], target: number): number {
 
   return -1;
 }
+
+const arr = [1, 2, 3, 4, 5, 6, 9];
+// const res = search1(arr,5.4)
+// console.log(res);
