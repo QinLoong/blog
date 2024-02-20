@@ -43,3 +43,32 @@ export function search1(arr: number[], target: number): number {
 const arr = [1, 2, 3, 4, 5, 6, 9];
 // const res = search1(arr,5.4)
 // console.log(res);
+
+**
+ * 递归查找
+ * @param arr
+ * @param target
+ * @param startIndex
+ * @param endIndex
+ */
+export function search2(
+  arr: number[],
+  target: number,
+  startIndex = 0,
+  endIndex = arr.length - 1,
+): number {
+  // 结束范围
+  if (arr.length === 0) return -1;
+  // 如果start和end相遇
+  if (startIndex > endIndex) return -1;
+  const midIndex = Math.floor((startIndex + endIndex) / 2);
+  const midVal = arr[midIndex];
+
+  if (target > midVal) {
+    return search2(arr, target, midIndex + 1, endIndex);
+  } else if (target < midVal) {
+    return search2(arr, target, startIndex, midIndex - 1);
+  } else {
+    return midIndex;
+  }
+}
