@@ -25,3 +25,8 @@ Function.prototype.myBind = function(context:any, ...bindArgs){
 function fun(this:any, a:number, b:number, c:number){
   console.log(this, a, b, c);
 }
+
+// @ts-ignore
+const f1 = fun.myBind({x:100}, 10, 20)
+f1(40)
+```
