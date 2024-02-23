@@ -21,3 +21,7 @@ Function.prototype.myBind = function(context:any, ...bindArgs){
     return self.apply(context, bindArgs.concat(args))
   }
 }
+
+function fun(this:any, a:number, b:number, c:number){
+  console.log(this, a, b, c);
+}
