@@ -6,3 +6,5 @@ tags:
 categories:
  - 算法
 ---
+
+bind 返回一个新函数（不执行），call 和 apply 会立即执行函数
