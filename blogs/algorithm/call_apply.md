@@ -35,3 +35,7 @@ fun.call(null, ...args)，call 的第一个值如果为null或undefined，fun的
   function fun(this: any, a: number, b: number, c: number) {
     console.log(this.x, a, b, c);
   }
+
+    // @ts-ignore
+  fun.myCall({ x: 100 }, 10, 20, 30);
+```
