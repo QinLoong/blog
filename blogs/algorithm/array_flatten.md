@@ -23,3 +23,22 @@ function flattenDeep1(arr: any[]): any[] {
 
     return res
 }
+
+// 数组深度扁平化，使用 concat
+function flatenDeep2(arr: any[]): any[] {
+    // 先判断是否已经拍平
+    const isDeep = arr.some((item) => item instanceof Array);
+
+    if (!isDeep) {
+      return arr;
+    }
+
+    const res = [].concat(...arr);
+    return flatenDeep2(res);
+  }
+
+// 如果结果都是string 或 number，可以使用toString
+function flatenDeep3(arr: any[]){
+    return arr.toString().split(',')
+}
+```
