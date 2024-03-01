@@ -39,3 +39,6 @@ fun.call(null, ...args)，call 的第一个值如果为null或undefined，fun的
     // @ts-ignore
   fun.myCall({ x: 100 }, 10, 20, 30);
 ```
+
+```typescript
+//apply 与上面类似
