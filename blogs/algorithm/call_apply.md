@@ -42,3 +42,8 @@ fun.call(null, ...args)，call 的第一个值如果为null或undefined，fun的
 
 ```typescript
 //apply 与上面类似
+
+Function.prototype.myApply = function (context: any, args: any[] = [])
+
+//其余与上面xiagn'togn
+```
