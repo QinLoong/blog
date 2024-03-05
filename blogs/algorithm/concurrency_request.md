@@ -6,3 +6,6 @@ tags:
 categories:
  - 算法
 ---
+
+``` javascript
+// 模拟接口
