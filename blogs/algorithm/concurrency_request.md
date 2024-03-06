@@ -9,3 +9,9 @@ categories:
 
 ``` javascript
 // 模拟接口
+
+/**
+ * 并发maxNum个请求，请求结果顺序与urls保持一致
+ * @param {*} urls
+ * @param {*} maxNum
+ */
