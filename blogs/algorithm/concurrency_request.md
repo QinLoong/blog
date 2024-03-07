@@ -15,3 +15,10 @@ categories:
  * @param {*} urls
  * @param {*} maxNum
  */
+
+function concurrencyRequest(urls, maxNum) {
+  return new Promise((reslove) => {
+    if (urls.length === 0) {
+      reslove([]);
+      return;
+    }
