@@ -22,3 +22,7 @@ function concurrencyRequest(urls, maxNum) {
       reslove([]);
       return;
     }
+
+    const result = [];
+    let index = 0;  // 按照顺序发送请求
+    let count = 0;  //请求的次数
