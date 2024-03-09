@@ -26,3 +26,9 @@ function concurrencyRequest(urls, maxNum) {
     const result = [];
     let index = 0;  // 按照顺序发送请求
     let count = 0;  //请求的次数
+
+    async function request() {
+      if(index === urls.length) return;
+      const url = urls[index];
+      const i = index;
+      index++
