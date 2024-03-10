@@ -32,3 +32,18 @@ function concurrencyRequest(urls, maxNum) {
       const url = urls[index];
       const i = index;
       index++
+
+      try {
+        const res = await fetchFn(url);
+        result[i] = res;
+      } catch (err) {
+        result[i] = err;
+      } finally {
+        count ++
+        if(count === urls.length){
+          console.log('请求都已完成');
+          reslove(result)
+        }
+        request()
+      }
+    }
