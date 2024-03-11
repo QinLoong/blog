@@ -47,3 +47,10 @@ function concurrencyRequest(urls, maxNum) {
         request()
       }
     }
+
+    const times = Math.min(maxNum, urls.length);
+    for (let i = 0; i < times; i++) {
+      request();
+    }
+  });
+}
