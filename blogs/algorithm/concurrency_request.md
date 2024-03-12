@@ -54,3 +54,16 @@ function concurrencyRequest(urls, maxNum) {
     }
   });
 }
+
+function fetchFn(url) {
+  console.log(url);
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (url % 2 ) {
+        resolve({ success: 1, data: url });
+      } else {
+        reject({ success: 0, data: url });
+      }
+    }, 3000);
+  });
+}
