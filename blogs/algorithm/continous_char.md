@@ -6,3 +6,11 @@ tags:
 categories:
  - 算法
 ---
+
+```typescript
+// 求连续最长的字符及长度
+
+  interface Ichar {
+    char: string;
+    length: number;
+  }
