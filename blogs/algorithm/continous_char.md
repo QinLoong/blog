@@ -14,3 +14,9 @@ categories:
     char: string;
     length: number;
   }
+
+    function getChar(str: string): Ichar {
+    const res = {
+      char: "",
+      length: 0,
+    };
