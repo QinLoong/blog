@@ -23,3 +23,10 @@ categories:
 
     if (str.length === 0) return res;
     let temLength = 0; //记录当前字符连续最长的长度
+    for (let i = 0; i < str.length; i++) {
+      temLength = 0;
+
+      for (let j = i; j < str.length; j++) {
+        if (str[i] === str[j]) {
+          temLength++;
+        }
