@@ -20,3 +20,6 @@ categories:
       char: "",
       length: 0,
     };
+
+    if (str.length === 0) return res;
+    let temLength = 0; //记录当前字符连续最长的长度
