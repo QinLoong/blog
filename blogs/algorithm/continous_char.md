@@ -30,3 +30,19 @@ categories:
         if (str[i] === str[j]) {
           temLength++;
         }
+
+        // 不相等时或到头时都得判断
+        if (str[i] !== str[j] || j === str.length - 1) {
+          // 不相等时判断最大值
+          if (res.length < temLength) {
+            res.char = str[i];
+            res.length = temLength;
+          }
+
+          if (i < str.length - 1) {
+            i = j - 1; //跳步
+          }
+
+          break;
+        }
+      }
