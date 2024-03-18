@@ -46,3 +46,7 @@ categories:
           break;
         }
       }
+      }
+
+    return res;
+  }
