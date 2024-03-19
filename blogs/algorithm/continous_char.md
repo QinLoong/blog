@@ -50,3 +50,13 @@ categories:
 
     return res;
   }
+
+  let res = getChar("aabbbcdddd");
+  // console.log(res);
+
+  // 优化 双指针j i 其中j不动，i动，不相等时j=i
+  function getChar2(str: string): Ichar {
+    const res = {
+      char: "",
+      length: 0,
+    };
