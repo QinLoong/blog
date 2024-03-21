@@ -63,3 +63,18 @@ categories:
 
     f (str.length === 0) return res;
     let temLength = 0; //记录当前字符连续最长的长度
+    for (let i = 0, j = 0; i < str.length; i++) {
+      if (str[i] === str[j]) {
+        temLength++;
+      } 
+      // 不相等时或到头时都得判断
+      if(str[i] !== str[j] || i === str.length - 1){
+        if (res.length < temLength) {
+          res.char = str[j];
+          res.length = temLength;
+        }
+
+        j = i;
+        temLength = 1;
+      }
+    }
