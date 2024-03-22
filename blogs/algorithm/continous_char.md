@@ -78,3 +78,10 @@ categories:
         temLength = 1;
       }
     }
+
+      return res;
+  }
+
+  let res2 = getChar2("aabbbcdddd");
+  console.log(res2);
+```
