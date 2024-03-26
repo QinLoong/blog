@@ -19,3 +19,16 @@ function curry(fun: Function) {
   const funArgsLength = fun.length;
   // 积累通过执行传入的参数
   let args: any[] = [];
+
+  function calc(this: any, ...newArgs: any[]) {
+    // 积累参数
+    args = [...args, ...newArgs];
+
+    if (args.length < funArgsLength) {
+      // 参数不够,返回参数
+      return calc;
+    } else {
+      // 参数够了，返回执行结果
+      return fun.apply(this, args.slice(0, funArgsLength));
+    }
+  }
