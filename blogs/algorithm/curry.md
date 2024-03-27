@@ -32,3 +32,7 @@ function curry(fun: Function) {
       return fun.apply(this, args.slice(0, funArgsLength));
     }
   }
+
+    return calc;
+}
+```
