@@ -6,3 +6,13 @@ tags:
 categories:
  - 算法
 ---
+
+
+```typescript
+function customNew<T>(calssFun: Function, ...args: any[]): T {
+  const obj = Object.create(calssFun.prototype);
+  // calssFun.apply(obj, args);
+  // return obj; 
+  //使用反射
+  return Reflect.construct(calssFun, args, obj.constructor);
+}
