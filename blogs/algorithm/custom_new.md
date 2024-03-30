@@ -16,3 +16,13 @@ function customNew<T>(calssFun: Function, ...args: any[]): T {
   //使用反射
   return Reflect.construct(calssFun, args, obj.constructor);
 }
+
+class Foo{
+  name:string
+  constructor(name:string){
+    this.name = name
+  }
+  getName():string{ 
+    return this.name
+  }
+}
