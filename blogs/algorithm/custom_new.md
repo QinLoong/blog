@@ -26,3 +26,7 @@ class Foo{
     return this.name
   }
 }
+
+const foo = customNew<Foo>(Foo, '治')
+console.log(foo);
+```
