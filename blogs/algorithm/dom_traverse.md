@@ -6,3 +6,8 @@ tags:
 categories:
  - 算法
 ---
+
+```typescript
+//遍历单个节点
+function visitNode(node: Node) {
+  if (node instanceof Comment) {
