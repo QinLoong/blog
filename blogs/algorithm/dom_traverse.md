@@ -11,3 +11,6 @@ categories:
 //遍历单个节点
 function visitNode(node: Node) {
   if (node instanceof Comment) {
+    //注释节点
+    console.log("Comment--", node.textContent);
+  } else if (node instanceof Text) {
