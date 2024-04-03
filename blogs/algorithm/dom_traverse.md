@@ -14,3 +14,9 @@ function visitNode(node: Node) {
     //注释节点
     console.log("Comment--", node.textContent);
   } else if (node instanceof Text) {
+    //文本节点
+    let t = node.textContent?.trim();
+    if (t) {
+      console.log("Text--", t);
+    }
+  } else if (node instanceof HTMLElement) {
