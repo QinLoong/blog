@@ -20,3 +20,7 @@ function visitNode(node: Node) {
       console.log("Text--", t);
     }
   } else if (node instanceof HTMLElement) {
+     // element
+    console.log("Element--", `<${node.tagName.toLocaleLowerCase()}>`);
+  }
+}
