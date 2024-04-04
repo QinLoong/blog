@@ -24,3 +24,8 @@ function visitNode(node: Node) {
     console.log("Element--", `<${node.tagName.toLocaleLowerCase()}>`);
   }
 }
+
+/**
+ * 深度优先遍历dom--递归
+ * @param root
+ */
