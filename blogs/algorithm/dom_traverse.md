@@ -29,3 +29,14 @@ function visitNode(node: Node) {
  * 深度优先遍历dom--递归
  * @param root
  */
+
+function deepFirstTraverse(root: Node) {
+  visitNode(root);
+
+  const childNodes = root.childNodes; //获取子节点
+  if (childNodes.length) {
+    childNodes.forEach((curNode) => {
+      deepFirstTraverse(curNode); //递归
+    });
+  }
+}
