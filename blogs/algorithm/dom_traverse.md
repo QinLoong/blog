@@ -40,3 +40,8 @@ function deepFirstTraverse(root: Node) {
     });
   }
 }
+
+/**
+ * 深度优先先遍历dom--非递归、栈
+ * @param root 
+ */
