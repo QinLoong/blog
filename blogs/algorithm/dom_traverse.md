@@ -45,3 +45,18 @@ function deepFirstTraverse(root: Node) {
  * 深度优先先遍历dom--非递归、栈
  * @param root 
  */
+
+function deepFirstTraverse2(root: Node) {
+  const stack:Node[] = []
+
+  stack.push(root)
+  while(stack.length){
+    const curNode = stack.pop()
+    if(curNode == null) break;
+    visitNode(curNode)
+    const childs = curNode.childNodes
+    Array.from(childs).reverse().forEach(child => {
+      stack.push(child)
+    })
+  }
+}
