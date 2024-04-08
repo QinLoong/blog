@@ -65,3 +65,7 @@ function deepFirstTraverse2(root: Node) {
  * 广度优先遍历，通过队列
  * @param root
  */
+function breadthFirstTraverse(root: Node) {
+  const queue: Node[] = [];
+  //根节点入队
+  queue.push(root);
