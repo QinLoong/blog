@@ -60,3 +60,8 @@ function deepFirstTraverse2(root: Node) {
     })
   }
 }
+
+/**
+ * 广度优先遍历，通过队列
+ * @param root
+ */
