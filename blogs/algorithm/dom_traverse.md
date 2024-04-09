@@ -69,3 +69,18 @@ function breadthFirstTraverse(root: Node) {
   const queue: Node[] = [];
   //根节点入队
   queue.push(root);
+
+  while (queue.length) {
+    // 头节点出队
+    const curNode = queue.shift();
+    if (curNode == null) break;
+
+    visitNode(curNode);
+    //头的子节点入队
+    const childNodes = curNode.childNodes;
+    if (childNodes.length) {
+      childNodes.forEach((n) => {
+        queue.push(n);
+      });
+    }
+  }
