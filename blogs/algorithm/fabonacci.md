@@ -6,3 +6,10 @@ tags:
 categories:
  - 算法
 ---
+
+```typescript
+/**
+ * 特别慢 时间复杂度为2的n次方
+ * @param n
+ * @returns
+ */
