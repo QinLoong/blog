@@ -6,3 +6,11 @@ tags:
 categories:
  - 算法
 ---
+
+```typescript
+/**
+ * 自定义instanceof
+ * @param instance 
+ * @param origin 
+ * @returns 
+ */
