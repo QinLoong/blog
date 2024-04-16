@@ -14,3 +14,12 @@ categories:
  * @param origin 
  * @returns 
  */
+
+function myInstanceof(instance: any, origin: any): boolean {
+  if (instance == null) return false;
+
+  const type = typeof instance;
+  // 如果是值类型，instanceof 直接false
+  if (type !== "object" && type !== "function") {
+    return false;
+  }
