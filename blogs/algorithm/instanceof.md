@@ -23,3 +23,11 @@ function myInstanceof(instance: any, origin: any): boolean {
   if (type !== "object" && type !== "function") {
     return false;
   }
+   while (instance) {
+    if (instance.__proto__ === origin.prototype) {
+      return true;
+    } else {
+      instance = instance.__proto__;
+    }
+  }
+  return false;
