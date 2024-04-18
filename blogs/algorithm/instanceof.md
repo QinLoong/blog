@@ -31,3 +31,7 @@ function myInstanceof(instance: any, origin: any): boolean {
     }
   }
   return false;
+
+  }
+
+```
