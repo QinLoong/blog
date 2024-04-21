@@ -6,3 +6,13 @@ tags:
 categories:
  - 算法
 ---
+
+```typescript
+// 青蛙跳台阶 
+function jumpFloor(number: number) {
+  if(number === 1) return 1
+  if(number === 2) return 2
+
+  let prev = 1; // 前一个
+  let next = 2; // 后一个
+  let sum = 0;
