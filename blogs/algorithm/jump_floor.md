@@ -16,3 +16,11 @@ function jumpFloor(number: number) {
   let prev = 1; // 前一个
   let next = 2; // 后一个
   let sum = 0;
+  for (let i = 3; i <= number; i++){
+    sum = prev + next;
+    prev = next;
+    next = sum;
+  }
+  return sum;
+}
+```
