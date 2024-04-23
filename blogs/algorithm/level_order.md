@@ -6,3 +6,11 @@ tags:
 categories:
  - 算法
 ---
+
+talk is cheap, show you my code!
+```js
+function levelOrder(root) {
+  if (!root) return [];
+  // result存储结果  queue队列里面存储每层节点
+  const queue = [root];
+  const result = [];
