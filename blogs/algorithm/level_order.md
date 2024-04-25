@@ -30,3 +30,5 @@ function levelOrder(root) {
     // 把每一层的结果放到数组
     result.push(curLevel)
   }
+  return result;
+}
