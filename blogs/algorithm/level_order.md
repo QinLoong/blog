@@ -32,3 +32,12 @@ function levelOrder(root) {
   }
   return result;
 }
+
+// 定义一个二叉树节点类
+class TreeNode {
+  constructor(val = 0, left = null, right = null) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+}
