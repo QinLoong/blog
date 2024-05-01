@@ -8,3 +8,9 @@ categories:
 ---
 
 ## 括号匹配，匹配一个字符串是否括号匹配{a{b[c]d}()}
+
+```typescript
+function match(str: string): boolean {
+  const stack: string[] = [];
+  const leftSymbols = "([{";
+  const rightSymbols = ")]}";
