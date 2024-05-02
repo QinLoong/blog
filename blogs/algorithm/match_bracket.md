@@ -14,3 +14,9 @@ function match(str: string): boolean {
   const stack: string[] = [];
   const leftSymbols = "([{";
   const rightSymbols = ")]}";
+
+  for (let i = 0; i < str.length; i++) {
+    let tem = str[i];
+    if (leftSymbols.includes(tem)) {
+      // 压栈
+      stack.push(tem);
