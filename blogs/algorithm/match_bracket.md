@@ -20,3 +20,20 @@ function match(str: string): boolean {
     if (leftSymbols.includes(tem)) {
       // 压栈
       stack.push(tem);
+    } else if (rightSymbols.includes(tem)) {
+      // 判断栈顶
+      let top = stack[stack.length - 1];
+      if (
+        (tem === ")" && top === "(") ||
+        (tem === "]" && top === "[") ||
+        (tem === "}" && top === "{")
+      ) {
+        stack.pop();
+      } else {
+        return false;
+      }
+    }
+     }
+
+  return stack.length === 0;
+}
