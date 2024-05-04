@@ -37,3 +37,7 @@ function match(str: string): boolean {
 
   return stack.length === 0;
 }
+
+const str = '()2([4()[]3){}'
+console.log(match(str));
+```
