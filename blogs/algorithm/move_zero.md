@@ -6,3 +6,21 @@ tags:
 categories:
  - 算法
 ---
+
+```typescript
+/**
+   * 传统方法 n^2
+   * @param arr
+   */
+  function movezero1(arr: number[]) {
+    const len = arr.length;
+    let zeroLen = 0;
+    for (let i = 0; i < len - zeroLen; i++) {
+      if (arr[i] === 0) {
+        arr.push(0);
+        arr.splice(i, 1); //本身就是O(n)复杂度
+        i--;
+        zeroLen++;
+      }
+    }
+  }
