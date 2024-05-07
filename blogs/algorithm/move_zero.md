@@ -24,3 +24,7 @@ categories:
       }
     }
   }
+
+  let arr = [1, 0, 3, 5, 0, 0, 4];
+  // movezero1(arr);
+  // console.log(arr);
