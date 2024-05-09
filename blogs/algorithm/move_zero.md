@@ -33,3 +33,7 @@ categories:
    * 双指针优化
    * @param arr
    */
+    function movezero2(arr: number[]) {
+    let firstZeroIdx = -1; //第一个0元素的下标
+    let i: number;
+    let len = arr.length;
