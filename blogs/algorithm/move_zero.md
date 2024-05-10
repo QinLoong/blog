@@ -37,3 +37,21 @@ categories:
     let firstZeroIdx = -1; //第一个0元素的下标
     let i: number;
     let len = arr.length;
+     for (i = 0; i < len; i++) {
+      // 当前元素值为0
+      if (arr[i] === 0) {
+        // 只在初次赋值
+        firstZeroIdx < 0 ? (firstZeroIdx = i) : "";
+      }
+
+      // 初次赋值后，指向0后面的第一个不为0元素
+      if (firstZeroIdx >= 0 && arr[i] !== 0) {
+        // 交换值
+        arr[firstZeroIdx] = arr[i];
+        arr[i] = 0;
+
+        firstZeroIdx++;
+      }
+    }
+  }
+```
