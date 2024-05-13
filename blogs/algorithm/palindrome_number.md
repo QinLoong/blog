@@ -27,3 +27,5 @@ function getNumbers(num: number): number[] {
 
   return res;
 }
+
+console.log(getNumbers(300));
