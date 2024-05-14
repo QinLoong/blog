@@ -29,3 +29,14 @@ function getNumbers(num: number): number[] {
 }
 
 console.log(getNumbers(300));
+
+// 方法2：双指针字符串头尾比较
+function getNumbers2(num: number): number[] {
+  const res: number[] = [];
+  if (num < 0) return res;
+
+  for (let i = 0; i < num; i++) {
+    const s = i.toString();
+    let startIndex = 0;
+    let endIndex = s.length - 1;
+    let flag = true;
