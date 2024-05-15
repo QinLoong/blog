@@ -40,3 +40,17 @@ function getNumbers2(num: number): number[] {
     let startIndex = 0;
     let endIndex = s.length - 1;
     let flag = true;
+     while (startIndex < endIndex) {
+      if (s[startIndex] !== s[endIndex]) {
+        flag = false;
+        break;
+      } else {
+        // 继续比较
+        startIndex++;
+        endIndex--;
+      }
+    }
+    if (flag) {
+      res.push(i);
+    }
+  }
