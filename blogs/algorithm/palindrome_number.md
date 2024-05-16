@@ -54,3 +54,6 @@ function getNumbers2(num: number): number[] {
       res.push(i);
     }
   }
+
+    return res;
+}
