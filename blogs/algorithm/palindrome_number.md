@@ -57,3 +57,5 @@ function getNumbers2(num: number): number[] {
 
     return res;
 }
+
+// console.log(getNumbers2(300));
