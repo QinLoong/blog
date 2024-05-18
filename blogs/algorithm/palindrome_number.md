@@ -59,3 +59,23 @@ function getNumbers2(num: number): number[] {
 }
 
 // console.log(getNumbers2(300));
+// 方法3：生成反转数 再比较
+function getNumbers3(num: number): number[] {
+  const res: number[] = [];
+  if (num < 0) return res;
+
+  for (let i = 0; i < num; i++) {
+    let n = i;
+    let reverseNum = 0; //保存反转数
+
+    // 生成翻转数
+    while (n > 0) {
+      reverseNum = reverseNum * 10 + (n % 10);
+      n = Math.floor(n / 10);
+    }
+    if(i === reverseNum) res.push(i)
+  }
+
+  return res;
+}
+```
