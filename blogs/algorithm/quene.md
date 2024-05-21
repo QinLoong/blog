@@ -23,3 +23,9 @@ export class Queue1 {
     this.lowestCount = 0;
     this.items = {};
   }
+
+  // 尾部进
+  enquene(n: number) {
+    this.items[this.count] = n;
+    this.count++;
+  }
