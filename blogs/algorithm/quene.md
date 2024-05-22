@@ -29,3 +29,13 @@ export class Queue1 {
     this.items[this.count] = n;
     this.count++;
   }
+
+  // 头部出
+  dequene() {
+    if (this.getlen() === 0) return undefined;
+
+    const res = this.items[this.lowestCount];
+    delete this.items[this.lowestCount];
+    this.lowestCount++;
+    return res;
+  }
