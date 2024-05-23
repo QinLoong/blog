@@ -39,3 +39,13 @@ export class Queue1 {
     this.lowestCount++;
     return res;
   }
+
+   getlen() {
+    return this.count - this.lowestCount;
+  }
+
+  // 查看队头
+  peek() {
+    return this.items[this.lowestCount];
+  }
+}
