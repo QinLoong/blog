@@ -49,3 +49,12 @@ export class Queue1 {
     return this.items[this.lowestCount];
   }
 }
+
+let q1 = new Queue1();
+q1.enquene(1);
+q1.enquene(3);
+q1.enquene(5);
+q1.dequene();
+q1.dequene();
+// console.log(q1);
+
