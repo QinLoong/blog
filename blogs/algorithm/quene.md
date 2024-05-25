@@ -58,3 +58,20 @@ q1.dequene();
 q1.dequene();
 // console.log(q1);
 
+interface Item2 {
+  value: number;
+  next: Item2 | null;
+}
+// 用链表模拟
+export class Queue2 {
+  private count: number;
+  // 头部节点
+  private head: Item2 | null;
+  // 尾部节点
+  private tail: Item2 | null;
+
+  constructor() {
+    this.count = 0;
+    this.head = null;
+    this.tail = null;
+  }
