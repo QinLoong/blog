@@ -75,3 +75,21 @@ export class Queue2 {
     this.head = null;
     this.tail = null;
   }
+  enqueue(n: number) {
+    // 创建新node
+    const newNode: Item2 = {
+      value: n,
+      next: null,
+    };
+    // 处理head,如果没有元素
+    if (!this.head) {
+      this.head = newNode;
+    }
+    // 处理tail
+    const tailNode = this.tail;
+    if (tailNode) {
+      tailNode.next = newNode;
+    }
+    this.tail = newNode;
+    this.count++;
+  }
