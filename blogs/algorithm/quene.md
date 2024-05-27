@@ -93,3 +93,18 @@ export class Queue2 {
     this.tail = newNode;
     this.count++;
   }
+
+    dequeue(): number | null {
+    if (this.head == null) return null;
+
+    // 取值
+    const value = this.head.value;
+    this.head = this.head.next;
+    this.count--;
+    return value;
+  }
+
+  getlen() {
+    return this.count;
+  }
+}
