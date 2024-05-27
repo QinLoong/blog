@@ -108,3 +108,13 @@ export class Queue2 {
     return this.count;
   }
 }
+
+const q2 = new Queue2();
+q2.enqueue(2);
+q2.enqueue(4);
+q2.enqueue(6);
+q2.dequeue()
+q2.dequeue()
+console.log(q2);
+
+```
