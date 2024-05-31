@@ -15,3 +15,21 @@ class ListNode {
     this.next = next;
   }
 }
+```
+然后，编写翻转链表的函数 `reverseList`：
+
+```js
+function reverseList(head) {
+  let prev = null;
+  let curr = head;
+
+  while (curr !== null) {
+    const nextTemp = curr.next;
+    curr.next = prev;
+    prev = curr;
+    curr = nextTemp;
+  }
+
+  return prev;
+}
+```
