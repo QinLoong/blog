@@ -50,3 +50,11 @@ categories:
         }
       }
     }
+
+        return quickSort2(left).concat(midVal, quickSort2(right));
+  }
+
+  const res = [4, 3, 7, 5, 8, 2, 1, 9, 6];
+
+  console.log(quickSort2(res));
+```
