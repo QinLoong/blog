@@ -33,3 +33,15 @@ function reverseList(head) {
   return prev;
 }
 ```
+
+这个函数使用迭代的方式将链表进行翻转。我们使用两个指针 `prev` 和 `curr`，分别表示前一个节点和当前节点。通过不断修改节点的 `next` 指针，将链表逐个反转。
+
+接下来，编写测试用例来验证翻转链表的正确性：
+
+```js
+// 创建一个链表: 1 -> 2 -> 3 -> 4 -> 5
+const head = new ListNode(1);
+head.next = new ListNode(2);
+head.next.next = new ListNode(3);
+head.next.next.next = new ListNode(4);
+head.next.next.next.next = new ListNode(5);
