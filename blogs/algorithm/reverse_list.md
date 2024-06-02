@@ -52,3 +52,15 @@ while (currentNode !== null) {
   console.log(currentNode.val);
   currentNode = currentNode.next;
 }
+
+const reversedHead = reverseList(head);
+
+console.log("翻转后的链表:");
+currentNode = reversedHead;
+while (currentNode !== null) {
+  console.log(currentNode.val);
+  currentNode = currentNode.next;
+}
+```
+
+运行上面的代码，你会看到原始链表和翻转后的链表的输出结果.
