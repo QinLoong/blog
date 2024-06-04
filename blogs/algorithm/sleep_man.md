@@ -14,3 +14,17 @@ categories:
 ![image-20230405163207942](/image-20230405163207942.png)
 
 talk is cheap, show you my code.
+
+```typescript
+class LazyMan {
+  private name: string;
+  private tasks: Function[] = [];
+
+  constructor(name: string) {
+    this.name = name;
+
+    //异步执行next
+    setTimeout(()=>{
+      this.next()
+    })
+  }
