@@ -28,3 +28,17 @@ class LazyMan {
       this.next()
     })
   }
+
+    sleep(second: number) {
+    const task = () => {
+      console.log(`${this.name}开始睡觉`);
+      setTimeout(() => {
+        console.log(`${this.name}睡了${second}s`);
+        //xxx秒后开始执行下一个
+        this.next();
+      }, second * 1000);
+    };
+    this.tasks.push(task)
+    return this // 链式调用
+  }
+
