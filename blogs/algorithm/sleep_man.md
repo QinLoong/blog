@@ -42,3 +42,8 @@ class LazyMan {
     return this // 链式调用
   }
 
+  private next() {
+    const task = this.tasks.shift();
+    if (task) task();
+  }
+
