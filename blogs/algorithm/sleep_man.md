@@ -47,3 +47,19 @@ class LazyMan {
     if (task) task();
   }
 
+   eat(food: string) {
+    const task = () => {
+      console.log(`${this.name}吃${food}`);
+      //立刻执行下一个任务
+      this.next();
+    };
+    this.tasks.push(task); //推进任务队列，不立即执行
+
+    return this; //链式调用
+  }
+}
+
+const zhi = new LazyMan("治");
+zhi.eat("香蕉").eat("苹果").sleep(2).eat('梨')
+```
+
