@@ -34,3 +34,28 @@ categories:
 
     return res
   }
+
+ // console.log(switchCase1('1abCD2'));
+
+
+  /**
+   * 通过ASCII charCodeAt判断
+   * @param str 
+   */
+  function switchCase2(str: string):string{
+    let res = ''
+    for(let i = 0; i < str.length; i++){
+      let code = str.charCodeAt(i)
+      if(code  >= 65 && code <= 90){
+        res += str[i].toLowerCase()
+      }else if(code  >= 97 && code <= 122){
+        res += str[i].toUpperCase()
+      }else{
+        // 其他字符
+        res += str[i]
+      }
+    }
+
+    return res
+  }
+```
