@@ -6,3 +6,24 @@ tags:
 categories:
  - 算法
 ---
+
+```typescript
+// 二叉树的遍历
+
+interface ITreeNode {
+  value: number;
+  left: ITreeNode | null;
+  right: ITreeNode | null;
+}
+const resArr: number[] = [];
+
+/**
+ * @param node 前序遍历
+ */
+function preOrderTraverse(node: ITreeNode | null) {
+  if (node == null) return;
+  // 根 左 右
+  resArr.push(node.value);
+  preOrderTraverse(node.left);
+  preOrderTraverse(node.right);
+}
