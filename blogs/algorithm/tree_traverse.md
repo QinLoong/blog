@@ -27,3 +27,14 @@ function preOrderTraverse(node: ITreeNode | null) {
   preOrderTraverse(node.left);
   preOrderTraverse(node.right);
 }
+
+/**
+ * @param node 中序遍历
+ * @returns
+ */
+function inOrderTraverse(node: ITreeNode | null) {
+  if (node == null) return;
+  inOrderTraverse(node.left);
+  resArr.push(node.value);
+  inOrderTraverse(node.right);
+}
