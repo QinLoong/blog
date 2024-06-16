@@ -38,3 +38,16 @@ function inOrderTraverse(node: ITreeNode | null) {
   resArr.push(node.value);
   inOrderTraverse(node.right);
 }
+
+/**
+ * @param node 后序遍历
+ */
+function postOrderTraverse(node: ITreeNode | null) {
+  if (node == null) return;
+  postOrderTraverse(node.left);
+  postOrderTraverse(node.right);
+  resArr.push(node.value);
+}
+// preOrderTraverse(tree)
+// inOrderTraverse(tree);
+// postOrderTraverse(tree)
