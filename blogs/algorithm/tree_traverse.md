@@ -51,3 +51,20 @@ function postOrderTraverse(node: ITreeNode | null) {
 // preOrderTraverse(tree)
 // inOrderTraverse(tree);
 // postOrderTraverse(tree)
+
+// 二叉搜索树 BST Binary Search Tree
+// 二叉搜索树的特点：左子树的值都小于根节点的值，右子树的值都大于根节点的值
+// 中序遍历的结果是一个有序的数组
+
+// 寻找BST中第k小的元素
+function getKthSmallest(node: ITreeNode | null, k: number): number | null {
+  inOrderTraverse(node);
+  // console.log(resArr);
+  return resArr[k - 1] || null;
+}
+
+const res1 = getKthSmallest(tree, 2)
+console.log(res1);
+
+
+```
