@@ -37,3 +37,8 @@ function findNums(arr: number[], target: number): number[] {
 
   return res;
 }
+
+const arr = [1, 2, 3, 4, 5];
+const res = findNums(arr, 6);
+const res2 = findNums2(arr,9)
+console.log(res2);
