@@ -42,3 +42,36 @@ const arr = [1, 2, 3, 4, 5];
 const res = findNums(arr, 6);
 const res2 = findNums2(arr,9)
 console.log(res2);
+
+// console.log(res);
+
+/**
+ * 双指针
+ * @param arr
+ * @param target
+ */
+function findNums2(arr: number[], target: number): number[] {
+  const res: number[] = [];
+  if (arr.length === 0) return res;
+  let start = 0;
+  let end = arr.length - 1;
+  while (start < end) {
+    if (arr[start] + arr[end] > target) {
+      // 右指针左移
+      end--;
+    } else if (arr[start] + arr[end] < target) {
+      // 左指针右移
+      start++;
+    } else {
+      // 正解
+      res.push(start);
+      res.push(end);
+      break;
+    }
+  }
+  return res;
+}
+
+```
+
+
